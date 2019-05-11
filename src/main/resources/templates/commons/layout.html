@@ -1,0 +1,104 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <title layout:title-pattern="$CONTENT_TITLE | $LAYOUT_TITLE">Thymeleaf de layout</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cube &mdash; Free Website Template, Free HTML5 Template by FreeHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700" rel="stylesheet">
+	<!-- Animate.css -->
+	<link rel="stylesheet" th:href="@{/css/animate.css}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" th:href="@{/css/icomoon.css}">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" th:href="@{/css/themify-icons.css}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" th:href="@{/css/magnific-popup.css}">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
+	<link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}">
+	<!-- Theme style  -->
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+
+
+	<!-- Modernizr JS -->
+
+	<script type="text/javascript" th:inline="javascript" th:src="@{/js/modernizr-2.6.2.min.js}"></script>
+
+	<!-- タイムライン  -->
+	<link rel="stylesheet" th:href="@{/css/timeline.css}">
+	<link rel="stylesheet" th:href="@{/css/timelineMain.css}">
+
+
+
+	<![endif]-->
+</head>
+<body>
+
+	<div class="gtco-loader"></div>
+
+	<div id="page">
+
+		<!-- header -->
+		<div th:replace="~{commons/header::header}"></div>
+
+
+		<!-- contents -->
+		<div layout:fragment="content" th:remove="tag">Contents is here!</div>
+
+		<!-- footer -->
+		<div th:replace="~{commons/footer::footer}"></div>
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+
+<!-- vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<!-- jQuery -->
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/jquery.min.js}"></script>
+<!-- jQuery Easing -->
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/jquery.easing.1.3.js}"></script>
+<!-- Bootstrap -->
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/bootstrap.min.js}"></script>
+<!-- Waypoints -->
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/jquery.waypoints.min.js}"></script>
+<!-- countTo -->
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/jquery.countTo.js}"></script>
+<!-- Carousel -->
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/owl.carousel.min.js}"></script>
+<!-- Magnific Popup -->
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/magnific-popup-options.js}"></script>
+
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/timeline.js}"></script>
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/sly.min.js}"></script>
+
+<!-- Main -->
+<script type="text/javascript" th:inline="javascript" th:src="@{/js/main.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry location="C:/Users/miruz/.m2/repository/org/postgresql/postgresql/42.2.4/postgresql-42.2.4.jar"/>
+
+  <context id="context1" >
+    <jdbcConnection driverClass="org.postgresql.Driver" connectionURL="jdbc:postgresql://localhost:5432/postgres" userId="postgres" password="lucky777" />
+    <javaModelGenerator targetPackage="jp.co.timepage.mybatis.entity" targetProject="C:/develop/pleiades/workspace/TimePage/src/main/java" />
+    <sqlMapGenerator    targetPackage="jp.co.timepage.mybatis.mapper" targetProject="C:/develop/pleiades/workspace/TimePage/src/main/resources" />
+    <javaClientGenerator targetPackage="jp.co.timepage.mybatis.mapper" targetProject="C:/develop/pleiades/workspace/TimePage/src/main/java" type="XMLMAPPER" />
+
+
+ 	<table schema="timeline" tableName="%"
+			enableInsert="true"
+			enableSelectByPrimaryKey="true"
+			enableSelectByExample="ture"
+			enableUpdateByPrimaryKey="true"
+			enableDeleteByPrimaryKey="true"
+			enableDeleteByExample="false"
+			enableCountByExample="false"
+			enableUpdateByExample="false"
+			selectByPrimaryKeyQueryId="true"
+			selectByExampleQueryId="true"
+			modelType="hierarchical">
+			<property name="constructorBased" value="false"/>
+		</table>
+  </context>
+</generatorConfiguration>

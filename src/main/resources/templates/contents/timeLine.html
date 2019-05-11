@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="commons/layout">
+<body>
+
+	<!-- content -->
+	<div layout:fragment="content">
+
+		<!-- START #タイトル -->
+		<div id="gtco-header" class="head-area" role="banner">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<p>ライフタイムです。</p>
+				</div>
+			</div>
+		</div>
+		<!-- END #タイトル -->
+
+		<br>
+
+		<!-- START #コンテンツ -->
+
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<div class="frame" id="effects">
+						<ul style="width: 2290px;">
+						  <li>1998</li>
+					      <li>1999</li>
+					      <li>2000</li>
+					      <li>2001</li>
+					      <li>2002</li>
+					      <li>2003</li>
+					      <li>2004</li>
+					      <li>2005</li>
+					      <li>2006</li>
+					      <li>2007</li>
+					      <li>2008</li>
+					      <li>2009</li>
+					      <li>2010</li>
+					      <li>2011</li>
+					      <li>2012</li>
+					      <li>2013</li>
+					      <li>2014</li>
+					      <li>2015</li>
+					      <li>2016</li>
+					      <li>2017</li>
+					    </ul>
+					</div>
+					<div class="controls center" style="text-align:center;margin:10px;">
+						<button class="prev">prev</button>
+					    <button class="next">next</button>
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="row" id="timePages">
+
+				<div class="col-md-12">
+
+					<section class="cd-timeline js-cd-timeline">
+						<div class="cd-timeline__container">
+
+							<div class="cd-timeline__block js-cd-block" v-for="(timePage, index) in timePages">
+								<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+									<img src="img/cd-icon-picture.svg" alt="Picture">
+								</div> <!-- cd-timeline__img -->
+
+								<div class="cd-timeline__content js-cd-content">
+									<h2>{{ timePage.title }}</h2>
+									<p>{{ timePage.contentOut }}</p>
+
+									<a href="#0" class="cd-timeline__read-more btn-modal_m">詳細</a>
+
+									<a href="#0" class="cd-timeline__read-more btn-modal_m" data-toggle="modal" data-target="#myModal-data">修正</a>
+
+									<span class="cd-timeline__date">{{ timePage.timeMonth }}</span>
+								</div> <!-- cd-timeline__content -->
+							</div> <!-- cd-timeline__block -->
+
+						</div>
+					</section> <!-- cd-timeline -->
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- ここからモーダル表示部分として追記 -->
+	 	<div id="myModal-data" class="modal fade">
+	        <div class="modal-dialog">
+	            <div class="modal-content" style="height:600px; width:840px; margin-left: -120px;">
+	                <div class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
+	                    <h4 id="modalTitle"></h4>
+	                </div>
+	                <div id="modalBody" class="modal-body">
+	                	<div id="modal-data">
+							<h4 id="modalContentOut"></h4>
+						</div>
+	                </div>
+	                <br>
+	                <div class="modal-footer">
+	                    <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+	                    <a class="btn btn-primary" id="eventUrl" target="_blank">更新</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+	</div>
+	<!-- END #コンテンツ -->
+
+
+
+
+</body>
+</html>

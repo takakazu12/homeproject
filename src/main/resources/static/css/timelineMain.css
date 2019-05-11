@@ -1,0 +1,70 @@
+
+/* -------------------------------- 
+
+年パネル横スクロール
+
+-------------------------------- */
+.nav-tabs-wrap {
+  overflow-y: none;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.nav-tabs-wrap .nav {
+  display: inline-block;
+  width: 100%;
+}
+
+.nav-tabs-wrap .nav > li {
+  display: inline-block;
+  float: none;
+}
+
+
+.head-area {
+  height: 70px;
+}
+
+/* -------------------------------- 
+モーダルボタン調整
+-------------------------------- */
+.btn-modal_m {
+  margin: 5px;
+}
+
+
+
+/* -------------------------------- 
+年月スクロールバー
+-------------------------------- */
+/* Frame */
+.frame {
+	height: 80px;
+	line-height: 80px;
+	overflow: hidden;
+}
+.frame ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-size: 10px;
+}
+.frame ul li {
+	float: left;
+	width: 100px;
+	height: 100%;
+	margin: 0 1px 0 0;
+	padding: 0;
+	background: #333;
+	color: #ddd;
+	text-align: center;
+	cursor: pointer;
+}
+.frame ul li.active {
+	color: #fff;
+	background: #a03232;
+}
+
+
+
