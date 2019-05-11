@@ -875,6 +875,7 @@ form label {
   font-size: 59px;
   line-height: 1.5;
 }
+
 @media screen and (max-width: 768px) {
   #gtco-header .display-tc h1,
   #gtco-counter .display-tc h1,
